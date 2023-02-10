@@ -21,3 +21,7 @@ body{
     width: 80%;
     margin: 4rem auto;
 }
+.register {
+    max-width: 800px;
+    margin: 0 auto;
+}
