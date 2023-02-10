@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form - Consumindo API</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+  </head>
+  <body class="root">
+    <div class="container">
+      <form>
+          <h1>Cadastro</h1>
+          <fieldset>
+            <legend>Informações Pessoais</legend>
+              <div class="inputs">
+                <input  type="text" id="completName" placeholder=" ">
+                <label for="completName">Nome completo</label>
+              </div>
+              <div class="inputs">
+                <input type="date" name="birthdayDate" id="birthdayDate" placeholder=" "> 
+                <label for="birthdayDate">Data de Nascimento</label>
+              </div>
+              <div class="inputs">
+                <input type="email" name="email" id="email" placeholder=" ">
+                <label for="email">E-mail</label>
+              </div>
+              <div class="sexChoice">
+                <p>Sexo</p>
+                <input type="radio" name="sex" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sex" id="fem">
+                <label for="fem">Feminino</label>
+              </div>
+              <div class="inputs">
+                <input type="text" name="cpf" id="cpf" placeholder=" ">
+                <label for="cpf">CPF</label>
+              </div>
+          </fieldset>
+          <fieldset>
+            <legend>Endereço</legend>
+            <div class="inputs">
+                <input type="text" name="cep" id="cep" placeholder=" ">
+                <label for="cep">CEP</label>
+            </div>
+            <div class="inputs">
+                <input type="text" name="city" id="city" placeholder=" " disabled>
+                <label for="street">Cidade</label>
+            </div>
+            <div class="inputs">
+                <input type="text" name="bairro" id="bairro" placeholder=" " disabled>
+                <label for="street">Bairro</label>
+            </div>
+            <div class="inputs">
+                <input type="text" name="street" id="street" placeholder=" " disabled>
+                <label for="street">Rua</label>
+            </div>
+          </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
