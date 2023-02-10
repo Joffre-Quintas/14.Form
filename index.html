@@ -8,10 +8,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/form.css">
+    <!-- JS -->
+    <script src="assets/js/cepAPI.js" defer></script>
   </head>
   <body class="root">
     <div class="container">
-      <form>
+      <form class="register">
           <h1>Cadastro</h1>
           <fieldset>
             <legend>Informações Pessoais</legend>
@@ -28,7 +30,7 @@
                 <label for="email">E-mail</label>
               </div>
               <div class="sexChoice">
-                <p>Sexo</p>
+                <p class="label">Sexo</p>
                 <input type="radio" name="sex" id="masc" checked>
                 <label for="masc">Masculino</label>
                 <input type="radio" name="sex" id="fem">
@@ -50,14 +52,19 @@
                 <label for="street">Cidade</label>
             </div>
             <div class="inputs">
-                <input type="text" name="bairro" id="bairro" placeholder=" " disabled>
+                <input type="text" name="neighborhood" id="neighborhood" placeholder=" " disabled>
                 <label for="street">Bairro</label>
             </div>
             <div class="inputs">
                 <input type="text" name="street" id="street" placeholder=" " disabled>
                 <label for="street">Rua</label>
             </div>
+            <div class="inputs">
+              <input type="text" name="complement" id="complement" placeholder=" ">
+              <label for="complement">Complemento</label>
+          </div>
           </fieldset>
+          <input type="submit" value="Enviar">
       </form>
     </div>
   </body>

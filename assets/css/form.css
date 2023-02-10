@@ -1,20 +1,4 @@
-h1::after {
-    display: block;
-    content: "";
-    height: 10px;
-    width: 0px;
-    background-color: var(--color-lightPurple);
-    /* border-radius: 50%; */
-    animation: movingBall 2.5s infinite;
-}
-@keyframes movingBall {
-    0% {
-        width: 0%;
-    }
-    50% {
-        width: 11rem;
-    }
-}
+
 fieldset {
     border: none;
     margin-top: 1rem;
@@ -23,11 +7,23 @@ legend {
     font-weight: 600;
     margin-bottom: .5rem;
 }
+legend::after {
+    display: block;
+    content: "";
+    height: 5px;
+    width: 20px;
+    background-color: var(--color-lightPurple);
+    /* border-radius: 0 10px 10px 0; */
+    animation: movingBall 2.5s infinite;
+}
 .inputs {
     display: flex;
     flex-direction: column;
     position: relative;
     margin: 2rem 0;
+}
+inputs:disabled {
+    background-color: dimgray;
 }
 .inputs input{
     outline: none;
@@ -36,7 +32,7 @@ legend {
     padding: .25rem 0 0.25rem .5rem;
 }
 .inputs label {
-    font-weight: 500;
+    font-weight: 600;
     position: absolute;
     top: -.1rem;
     z-index: 1;
@@ -49,4 +45,29 @@ legend {
 }
 .inputs input:focus {
     border-bottom: 2px solid var(--color-lightPurple);
+}
+.label{
+    color: var(--color-lightPurple);
+    font-weight: 600;
+}
+
+input[type='submit'] {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    height: 2rem;
+    width: 50%;
+    letter-spacing: 2px;
+    background-color: var(--color-lightPurple);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+input[type='submit']:hover {
+    background-color: rgb(128,128,243);
 }
