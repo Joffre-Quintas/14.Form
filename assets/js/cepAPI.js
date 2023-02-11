@@ -1,3 +1,5 @@
+import { createErrorMsg } from "./createErrorMsg.js"
+
 const inputCEP = document.querySelector('#cep')
 
 
