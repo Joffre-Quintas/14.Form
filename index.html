@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="assets/css/general.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <!-- JS -->
-    <script src="assets/js/cepAPI.js" defer></script>
+    <script type="module" src="assets/js/validationInputName.js" defer></script>
+    <script type="module" src="assets/js/cepAPI.js" defer></script>
   </head>
   <body class="root">
     <div class="container">
@@ -18,8 +19,12 @@
           <fieldset>
             <legend>Informações Pessoais</legend>
               <div class="inputs">
-                <input  type="text" id="completName" placeholder=" ">
-                <label for="completName">Nome completo</label>
+                <input  type="text" id="name" placeholder=" ">
+                <label for="name">Nome</label>
+              </div>
+              <div class="inputs">
+                <input  type="text" id="lastName" placeholder=" ">
+                <label for="lastName">Sobrenome</label>
               </div>
               <div class="inputs">
                 <input type="date" name="birthdayDate" id="birthdayDate" placeholder=" "> 
