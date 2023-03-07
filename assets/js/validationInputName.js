@@ -18,7 +18,6 @@ function validationName(input) {
         createErrorMsg(input, messageError.nullCamp)
 
     } else if(!regexName.test(value)) {
-        // mensage = '*Apenas letras'
         createErrorMsg(input, messageError.justLetters)
     } else if(value.includes(' ')) {
         createErrorMsg(input, messageError.notTrim)
