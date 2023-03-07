@@ -1,9 +1,9 @@
 import { createErrorMsg, removeErrorMsg } from "./createErrorMsg.js";
 import { messageError } from "./objectErrorMsg.js";
 
-const email = document.getElementById('email');
+export const email = document.getElementById('email');
 
-email.addEventListener('blur', (input) => {
+export function validationEmail (input) {
     removeErrorMsg(input);
 
     const value = input.target.value;
@@ -19,4 +19,6 @@ email.addEventListener('blur', (input) => {
     } else if(value.includes(' ')) {
         createErrorMsg(input, messageError.notTrim)
     }
-})
+}
+
+// email.addEventListener('blur', validationEmail)

@@ -1,16 +1,13 @@
 import { createErrorMsg, removeErrorMsg } from "./createErrorMsg.js";
 import { messageError } from "./objectErrorMsg.js";
 
-export const inputName = document.querySelector('#name')
-export const inputLastName = document.querySelector('#lastName')
+export const inputCPF = document.getElementById('cpf')
 
-export const inputs = [inputName, inputLastName]
-
-export function validationName(input) {
+export function validationCPF(input) {
     removeErrorMsg(input)
 
     const value = input.target.value;
-    const regexName = /[a-zA-Z]/;
+    const regexName = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/;
     let mensage = ''
 
     createErrorMsg(input,mensage)
@@ -18,14 +15,12 @@ export function validationName(input) {
         createErrorMsg(input, messageError.nullCamp)
 
     } else if(!regexName.test(value)) {
-        createErrorMsg(input, messageError.justLetters)
+        createErrorMsg(input, messageError.CPFexample)
     } else if(value.includes(' ')) {
         createErrorMsg(input, messageError.notTrim)
     }
     
 }
 
+// inputCPF.addEventListener('blur', validationCPF)
 
-// inputs.forEach(input => input.addEventListener('blur', (event) => { 
-//     validationName(event)
-// })) 
