@@ -1,4 +1,5 @@
 import { createErrorMsg, removeErrorMsg } from "./createErrorMsg.js";
+import { messageError } from "./objectErrorMsg.js";
 
 const inputName = document.querySelector('#name')
 const inputLastName = document.querySelector('#lastName')
@@ -14,11 +15,13 @@ function validationName(input) {
 
     createErrorMsg(input,mensage)
     if(value == '') {
-        mensage = '*Preencha o campo'
-        createErrorMsg(input, mensage)
+        createErrorMsg(input, messageError.nullCamp)
+
     } else if(!regexName.test(value)) {
-        mensage = '*Apenas letras'
-        createErrorMsg(input, mensage)
+        // mensage = '*Apenas letras'
+        createErrorMsg(input, messageError.justLetters)
+    } else if(value.includes(' ')) {
+        createErrorMsg(input, messageError.notTrim)
     }
     
 }
