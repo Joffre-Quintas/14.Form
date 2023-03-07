@@ -1,6 +1,6 @@
 import { createErrorMsg, removeErrorMsg } from "./createErrorMsg.js"
 
-const inputCEP = document.querySelector('#cep')
+export const inputCEP = document.querySelector('#cep')
 
 // Função para mudar os inputs do setor do CEP
 function adressContentReplace(convertCEP) {
@@ -14,7 +14,7 @@ function adressContentReplace(convertCEP) {
 }
 
 // Função assíncrona para localizar o CEP
-async function findCEP(input) { 
+export async function findCEP(input) { 
     removeErrorMsg(input)  
     if(input.target.value == '') {
         createErrorMsg(input, '*Preencha o campo')
@@ -36,6 +36,6 @@ async function findCEP(input) {
     }
 }
 
-inputCEP.addEventListener('blur', (input) => {
-    findCEP(input)
-})
+// inputCEP.addEventListener('blur', (input) => {
+//     findCEP(input)
+// })
